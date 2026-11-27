@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Adventures Blog — Подорожі дружби</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Подорожі дружби: відкриваючи світ разом</h1>
+        <p>Привіт, мандрівнику! Разом із друзями ми обійшли пів світу, і кожна поїздка була особливою. Приєднуйся — попереду три міста, які назавжди залишилися в наших серцях.</p>
+    </header>
+    <nav aria-label="Головне меню">
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="lviv.html">Міста</a>: <a href="lviv.html">Львів</a>, <a href="paris.html">Париж</a>, <a href="tokyo.html">Токіо</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="index.html#subscribe">Підписка</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="slideshow" aria-label="Добірка міст">
+            <h2>Мої топ-3 міста світу</h2>
+            <div class="slideshow">
+                <figure><a href="lviv.html"><img src="img/lviv.svg" alt="Панорама Львова"></a><figcaption>🇺🇦 Львів — місто кави та легенд</figcaption></figure>
+                <figure><a href="paris.html"><img src="img/paris.svg" alt="Ейфелева вежа в Парижі"></a><figcaption>🇫🇷 Париж — вечір під Ейфелевою вежею</figcaption></figure>
+                <figure><a href="tokyo.html"><img src="img/tokyo.svg" alt="Токійська вежа"></a><figcaption>🇯🇵 Токіо — місто неонових вогнів</figcaption></figure>
+            </div>
+        </section>
+
+        <section id="subscribe">
+            <h2>Підписка на новини</h2>
+            <form action="#" method="post">
+                <label for="sub-email">Електронна пошта</label>
+                <input type="email" id="sub-email" name="email" placeholder="you@example.com" required>
+                <p class="checkbox-row"><input type="checkbox" id="agree" name="agree" required> <label for="agree">Погоджуюсь отримувати розсилку блогу</label></p>
+                <button type="submit">Підписатися</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-info">
+            <nav aria-label="Корисні посилання">
+                <ul>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Політика конфіденційності</a></li>
+                    <li><a href="#">Умови використання</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <a href="#"><img src="img/fb.svg" alt="Faceblock" width="24" height="24"></a>
+                <a href="#"><img src="img/tw.svg" alt="Tweety" width="24" height="24"></a>
+                <a href="#"><img src="img/ig.svg" alt="Instadrama" width="24" height="24"></a>
+            </div>
+            <p>Контакти: <a href="contact.html">contact.html</a> · <a href="mailto:svyatoslav@example.com">svyatoslav@example.com</a></p>
+            <p>&copy; 2026 Svyatoslav Adventures Blog.</p>
+        </div>
+    </footer>
+</body>
+</html>

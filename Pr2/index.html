@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page Home — практична робота №2, верстка за макетом Figma Landing Page UI Kit.">
+    <title>Petworld | Home</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="top-bar">
+        <a class="logo" href="index.html" aria-label="Petworld — home">
+            <img src="assets/logo.svg" alt="" width="35" height="35">
+            <span class="logo__text">Petworld</span>
+        </a>
+        <nav class="top-bar__nav" aria-label="Main">
+            <a href="#features">Services</a>
+            <a href="#feedback">Reviews</a>
+            <a href="#cta">Contacts</a>
+        </nav>
+        <a class="btn btn--blue" href="#cta">Get Started</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__text">
+                <h1 class="hero__title">Home for<br>your pets</h1>
+                <p class="hero__subtitle">Everything your dog or cat needs: tasty food, safe toys and caring service — delivered straight to your door.</p>
+                <a class="btn btn--yellow" href="#features">Learn more</a>
+            </div>
+            <img class="hero__img" src="assets/hero.jpg" alt="A yellow dog and a black cat sitting in a cardboard box" width="460" height="460">
+        </section>
+
+        <section class="video" aria-label="Promo video">
+            <div class="video__frame">
+                <img class="video__cover" src="assets/video-cover.jpg" alt="Two dogs in colourful jackets">
+                <button class="video__play" type="button" aria-label="Play video">
+                    <img src="assets/play.svg" alt="" width="51" height="46">
+                </button>
+            </div>
+        </section>
+
+        <section class="logos" aria-label="Our partners">
+            <ul class="logos__row">
+                <li>Nestlé</li>
+                <li>Apple</li>
+                <li>Amazon</li>
+                <li>Google</li>
+                <li>Walmart</li>
+                <li>Petco</li>
+            </ul>
+        </section>
+
+        <section class="features" id="features">
+            <h2 class="section-title">Why choose us</h2>
+            <div class="features__grid">
+                <article class="card">
+                    <img src="assets/icon-food.svg" alt="" width="56" height="56">
+                    <div class="card__text">
+                        <h3 class="card__title">Best quality pet food</h3>
+                        <p class="card__subtitle">Fresh ingredients slowly baked into super delicious food.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="assets/icon-toys.svg" alt="" width="56" height="56">
+                    <div class="card__text">
+                        <h3 class="card__title">Toys &amp; Accessories</h3>
+                        <p class="card__subtitle">Soft toys, chew toys and rope toys. Strong, interactive and fun.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="assets/icon-care.svg" alt="" width="56" height="56">
+                    <div class="card__text">
+                        <h3 class="card__title">Pets medical care</h3>
+                        <p class="card__subtitle">Great treatments and regular check-ups for your friend.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="feedback" id="feedback">
+            <figure class="feedback__content">
+                <img class="feedback__icon" src="assets/quote.svg" alt="" width="60" height="48">
+                <blockquote class="feedback__text">We love using Petworld products. Environmentally friendly and sustainable, with great value for money. Our bulldog is happier than ever!</blockquote>
+                <figcaption class="feedback__author">
+                    <img src="assets/author.jpg" alt="Dylan Shaw" width="64" height="64">
+                    <span>Dylan Shaw</span>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="cta" id="cta">
+            <div class="cta__text">
+                <h2 class="cta__title">Let’s talk, woof!</h2>
+                <p class="cta__subtitle">You can ask us questions about your pet, and we will be happy to answer you!</p>
+            </div>
+            <img class="cta__img" src="assets/cta.jpg" alt="Cartoon dog playing with a bone" width="320" height="213">
+            <a class="btn btn--yellow btn--small" href="mailto:hello@petworld.example">Contact us</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="logo" href="index.html" aria-label="Petworld — home">
+            <img src="assets/logo.svg" alt="" width="35" height="35">
+            <span class="logo__text">Petworld</span>
+        </a>
+        <div class="footer__links">
+            <span class="footer__copy">&copy; Petworld 2026</span>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms of use</a>
+        </div>
+        <ul class="footer__socials">
+            <li><a href="#"><img src="assets/facebook.svg" alt="Facebook" width="24" height="24"></a></li>
+            <li><a href="#"><img src="assets/twitter.svg" alt="Twitter" width="24" height="24"></a></li>
+            <li><a href="#"><img src="assets/instagram.svg" alt="Instagram" width="24" height="24"></a></li>
+            <li><a href="#"><img src="assets/linkedin.svg" alt="LinkedIn" width="24" height="24"></a></li>
+        </ul>
+    </footer>
+</body>
+</html>

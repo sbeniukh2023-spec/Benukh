@@ -1,0 +1,169 @@
+/* Lab7 — Flexbox (header#featured_container), Grid (новини) та медіа-запити
+   Джерело структури: https://lpnu.ua/ (Chrome DevTools → Elements) */
+
+html { font-size: 10px; }
+
+body {
+    margin: 0;
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background: #fff;
+}
+
+a { text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ================= HEADER (Flexbox) ================= */
+#featured_container {
+    background: #C2C2C2;
+}
+
+#featured_container::before {
+    display: block;
+    height: 2px;
+    content: "";
+    background-image: linear-gradient(to right, #979797 0%, #C2C2C2 50%, #979797 100%);
+}
+
+#featured_container .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+#featured_container .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0 30px;
+}
+
+#featured_container .col {
+    position: relative;
+    flex: 1 1 calc(50% - 15px);          /* Desktop / Tablet: 2 колонки */
+    min-width: 0;
+    margin-bottom: 3rem;
+}
+
+#featured_container a {
+    display: block;
+    position: relative;
+    color: #fff;
+}
+
+#featured_container a img { opacity: .85; transition: opacity 1s ease-out; }
+#featured_container a:hover img { opacity: 1; }
+
+#featured_container .shadow_featured {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 75%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,.85));
+    transition: opacity 2s ease-out;
+}
+#featured_container a:hover .shadow_featured { opacity: .1; }
+
+#featured_container h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 30px;
+    border-bottom: 2px solid #fff;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1.1;
+}
+
+#featured_container h2 span {
+    padding: 2px 6px;
+    background: #252775;
+    line-height: 1.6;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    transition: background 2s ease-out, transform .3s ease;
+}
+#featured_container a:hover h2 span { background: #00A1E4; }
+
+/* ================= MAIN: новини (Grid) ================= */
+.main-container { padding-top: 20px; padding-bottom: 40px; }
+
+.news-title {
+    margin: 20px 0 30px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #252775;
+}
+.news-title a { color: #00A1E4; border-bottom: 2px solid transparent; transition: border-color .3s; }
+.news-title a:hover { border-bottom-color: #00A1E4; }
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   /* Desktop: 4 колонки */
+    gap: 30px 20px;
+}
+
+.news-item a { display: block; color: #1a1a1a; }
+
+.news_teaser { position: relative; color: #444; }
+.news_teaser img {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -12px;
+    border-bottom: 2px solid #757575;
+    transition: transform .4s ease;
+}
+.news-item:hover .news_teaser img { transform: scale(1.03); }
+.news_teaser { overflow: hidden; }
+.news_teaser span {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    margin-left: 15px;
+    padding: 5px 7px;
+    background: #757575;
+    color: #fff;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.news-item h3 {
+    margin: 14px 0 0;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #0a77b8;
+    transition: color .3s;
+}
+.news-item:hover h3 { color: #252775; }
+
+/* ================= MEDIA QUERIES ================= */
+/* Tablet: 768px – 1023px → 2 колонки */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .news-grid { grid-template-columns: repeat(2, 1fr); }
+    #featured_container h2 { font-size: 2rem; padding: 20px; }
+}
+
+/* Mobile: до 767px → 1 колонка */
+@media (max-width: 767px) {
+    .news-grid { grid-template-columns: 1fr; }
+    #featured_container .col { flex-basis: 100%; }
+    #featured_container h2 { font-size: 1.8rem; padding: 15px; }
+    .news-title { font-size: 2.4rem; }
+}
