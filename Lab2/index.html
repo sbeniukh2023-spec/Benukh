@@ -1,79 +1,58 @@
+<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Мої лабораторні роботи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Програмування в Internet — список робіт</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; line-height: 1.5; color: #222; }
+        header { background: #0b4f8a; color: #fff; padding: 16px 24px; }
+        header h1 { margin: 0; font-size: 26px; }
+        nav { background: #eef3f8; padding: 8px 24px; border-bottom: 1px solid #cfd8e3; }
+        nav ul { margin: 0; padding-left: 20px; }
+        nav ol { margin: 4px 0 8px; }
+        nav a { color: #0b4f8a; }
+        .layout { display: flex; gap: 24px; padding: 24px; }
+        article { flex: 3; }
+        aside ul { list-style: none; padding: 0; }
+        aside { flex: 1; background: #f7f7f7; padding: 12px 20px; border-radius: 6px; align-self: flex-start; }
+        footer { text-align: center; padding: 14px; background: #222; color: #fff; }
+    </style>
 </head>
-
 <body>
+    <header>
+        <h1>Програмування в Internet</h1>
+    </header>
 
-<header>
-    <h1>Програмування в Internet</h1>
-</header>
-
-<nav>
-    <ul>
-        <li>
-            <a href="index.html">Головна</a>
-        </li>
-
-        <li>
-            <a href="#labs">Лабораторні роботи</a>
-
-            <ol>
-                <li>
-                    <a href="Lab1/index.html">
-                        Lab1 - Лабораторна робота №1
-                    </a>
-                </li>
-
-                <li>
-                    <a href="Lab2/index.html">
-                        Lab2 - Створення меню сайту
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#lab3">
-                        Lab3 - Лабораторна робота №3
-                    </a>
-                </li>
-            </ol>
-        </li>
-    </ul>
-</nav>
-
-<main>
-
-    <article>
-        <section id="labs">
-            <h2>Лабораторні роботи</h2>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-            </p>
-        </section>
-    </article>
-
-    <aside>
-        <h2>Інші курси</h2>
-
-        <ul>
-            <li><a href="https://www.w3schools.com/cpp/" target="_blank">Програмування C++</a></li>
-            <li><a href="https://www.w3schools.com/sql/" target="_blank">Бази даних</a></li>
-            <li><a href="https://www.w3schools.com/networking/" target="_blank">Комп'ютерні мережі</a></li>
-            <li><a href="https://www.w3schools.com/java/" target="_blank">Java</a></li>
-            <li><a href="https://www.w3schools.com/python/" target="_blank">Python</a></li>
+    <nav>
+        <ul id="mainmenu">
+            <li><a href="../index.html">Головна — список робіт</a></li>
+            <li><a href="#labs">Лабораторна робота</a></li>
         </ul>
-    </aside>
+    </nav>
 
-</main>
+    <main class="layout">
+        <article>
+            <section id="labs">
+                <h2>Лабораторна робота</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </section>
+        </article>
 
-<footer>
-    <p>©Copyright 2026 by Sv At. All rights reserved.</p>
-</footer>
+        <aside>
+            <h2>Інші курси</h2>
+            <ul>
+                <li><a href="https://www.coursera.org/courses?query=object-oriented%20programming" target="_blank">Об'єктно-орієнтоване програмування</a></li>
+                <li><a href="https://www.coursera.org/courses?query=enterprise%20networks" target="_blank">Корпоративні мережі</a></li>
+                <li><a href="https://www.coursera.org/courses?query=operating%20systems%20networking" target="_blank">Мережі ОС</a></li>
+                <li><a href="https://www.coursera.org/courses?query=systems%20programming" target="_blank">Системне програмування</a></li>
+                <li><a href="https://www.coursera.org/courses?query=industry%20economics" target="_blank">Економіка галузі</a></li>
+            </ul>
+        </aside>
+    </main>
 
+    <footer>
+        <p>&copy;Copyright 2026 by Святослав. All rights reversed.</p>
+    </footer>
 </body>
 </html>
